@@ -1,0 +1,32 @@
+<form [formGroup]="formCandidat" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="nom">Nom Candidat</label>
+    <input  formControlName="candidatFirstName" class="form-control" type="text">
+      <i>Le Nom est obligatoire</i>
+  </div>
+  <div class="form-group">
+    <label for="Prenom">Prénom Candidat</label>
+    <input  formControlName="candidatLastName" class="form-control" type="text">
+      <i>Le Prénom est obligatoire</i>
+  </div>
+  <div class="form-group">
+    <label for="Specialite">Specialité</label>
+    <input  formControlName="candidatSpecialite" class="form-control" type="text">
+    <i>La Specialite est obligatoire</i>
+  </div>
+  <div class="form-group">
+    <label for="Niveau">Niveau</label>
+    <input  formControlName="candidatNiveau" class="form-control" type="text">
+    <i>Le Niveau est obligatoire</i>
+  </div>
+  <div class="form-group">
+    <label for="Formation">Formation</label>
+    <select formControlName="formationId" class="form-control" name="formation" id="formation">
+    <i>La Formation est obligatoire</i>
+    <option *ngFor="let f of listFormations" value="{{ f?.id }}">{{ f?.formationName }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-outline-success mt-2">Envoyer</button>
+  </div>
+</form>

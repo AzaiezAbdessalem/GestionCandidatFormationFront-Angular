@@ -1,0 +1,31 @@
+<table class="table" border="2">
+  <thead>
+    <th>#</th>
+    <th>Nom </th>
+    <th>Prénom</th>
+    <th>Specialité</th>
+    <th>Niveau</th>
+    <th>Formation</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of listCandidats">
+      <td>{{ c.id }}</td>
+      <td>{{ c.candidatFirstName }}</td>
+      <td>{{ c.candidatLastName }}</td>
+      <td>{{ c.candidatSpecialite }}</td>
+      <td>{{ c.candidatNiveau }}</td>
+      <td>{{ c.formation.formationName }}<td>
+
+        <div class="col">
+          <button class="btn-sm btn btn-sm fa fa-edit btn-outline-info">Modifier</button>
+        </div>
+        <div class="col">
+          <button (click)="onDelete(c.id)" class="btn-sm btn btn-sm fa fa-remove btn-outline-danger">Supprimer</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+

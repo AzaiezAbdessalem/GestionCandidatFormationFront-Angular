@@ -1,0 +1,13 @@
+<form [formGroup]="formaForm" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="formation">Nom de formation</label>
+
+    <input  formControlName="formationName" type="text" id="formation" class="form-control" placeholder="saisir le nom de formation">
+
+
+    <label for="formation">Duree</label>
+
+    <input formControlName="duree" type="text" id="duree" class="form-control" placeholder="saisir la duree">
+  </div>
+  <button class="btn-btn-outline-primary mt-3 btn-sm">Ajouter</button>
+</form>
